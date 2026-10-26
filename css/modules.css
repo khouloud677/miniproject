@@ -1,0 +1,36 @@
+
+.module{
+    margin-top:24px;
+    scroll-margin-top:90px
+}
+#employes{
+    scroll-margin-top:90px
+}
+.module .toolbar{
+    margin:18px 0 8px
+}
+.module .toolbar input[type=number]{
+    flex:0 1 180px
+}
+tfoot td{
+    font-weight:700;
+    border-top:2px solid var(--line);
+    border-bottom:0
+}
+:is(.toolbar button):focus-visible{
+    outline:2px solid var(--orange);
+    outline-offset:2px
+}
+.export{
+    float:right;
+    margin-left:12px
+}
+.export i{
+    margin-right:8px
+}
+.conges-count{
+    margin:8px 0 0;
+    font-size:15px;
+    font-weight:600;
+    color:var(--muted)
+}
