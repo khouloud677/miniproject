@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Avances sur salaire</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/modules.css">
+    </head>
+    <body data-page="advances">
+        <main class="content">
+            <h1>Avances sur salaire</h1>
+            <section class="card panel">
+                <h2>Suivi des avances</h2>
+                <form class="toolbar" id="f-avance">
+                    <select id="a-emp"></select>
+                    <input id="a-montant" type="number" min="1" placeholder="Montant (DT)" required>
+                    <button class="btn">+ Ajouter une avance</button>
+                </form>
+                <div class="table-scroll">
+                    <table id="t-avances"></table>
+                </div>
+            </section>
+        </main>
+        <script src="js/layout.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/modules.js"></script>
+    </body>
+</html>

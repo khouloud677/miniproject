@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Employés</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/modules.css">
+    </head>
+    <body data-page="employees">
+        <main class="content">
+            <h1>Employés</h1>
+            <section class="card panel">
+                <div class="toolbar">
+                    <input type="search" id="f-q" placeholder="Rechercher un nom ou un poste">
+                    <select id="f-contrat">
+                        <option value="">Tous les contrats</option>
+                        <option>CDI</option>
+                        <option>CDD</option>
+                        <option>Stage</option>
+                    </select>
+                    <select id="f-statut">
+                        <option value="">Tous les statuts</option>
+                        <option>Actif</option>
+                        <option>En congé</option>
+                        <option>Contrat terminé</option>
+                    </select>
+                    <span class="count" id="count"></span>
+                </div>
+                <form class="toolbar" id="f-employe">
+                    <input id="e-nom" placeholder="Nom et prénom" required>
+                    <input id="e-poste" placeholder="Poste" required>
+                    <select id="e-contrat">
+                        <option>CDI</option>
+                        <option>CDD</option>
+                        <option>Stage</option>
+                    </select>
+                    <input id="e-salaire" type="number" min="0" step=".01" placeholder="Salaire (DT)" required>
+                    <button class="btn">+ Ajouter un employé</button>
+                </form>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-key="nom">
+                                    <button class="sort">Nom</button>
+                                </th>
+                                <th data-key="poste">
+                                    <button class="sort">Poste</button>
+                                </th>
+                                <th data-key="contrat">
+                                    <button class="sort">Contrat</button>
+                                </th>
+                                <th data-key="mois">
+                                    <button class="sort">Embauche</button>
+                                </th>
+                                <th data-key="salaire" class="num">
+                                    <button class="sort">Salaire</button>
+                                </th>
+                                <th data-key="statut">
+                                    <button class="sort">Statut</button>
+                                </th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <script src="js/layout.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
