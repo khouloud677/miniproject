@@ -1,57 +1,71 @@
 <!doctype html>
-  <html lang="fr">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Tableau de bord RH</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/dashboard.css">
-        <link rel="stylesheet" href="css/modules.css">
-    </head>
-    <body data-page="dashboard">
-      <main class="content">
-          <h1>Tableau de bord</h1>
-          <section class="grid-4" aria-label="Indicateurs RH">
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tableau de bord RH</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/modules.css">
+</head>
+
+<body data-page="dashboard">
+
+    <main class="content">
+        <h1>Tableau de bord</h1>
+
+        <section class="grid-4" aria-label="Indicateurs RH">
             <article class="card stat">
-              <p class="stat-label">Total employés</p>
+                <h2 class="stat-label">Total employés</h2>
                 <p class="stat-value" id="s-total">0</p>
             </article>
+
             <article class="card stat">
-              <p class="stat-label">Employés actifs</p>
-              <p class="stat-value" id="s-contrats">0</p>
+                <h2 class="stat-label">Employés actifs</h2>
+                <p class="stat-value" id="s-contrats">0</p>
             </article>
+
             <article class="card stat">
-              <p class="stat-label">Congés en attente</p>
-              <p class="stat-value" id="s-conges">0</p>
+                <h2 class="stat-label">Congés en attente</h2>
+                <p class="stat-value" id="s-conges">0</p>
             </article>
+
             <article class="card stat">
-              <p class="stat-label">Total des salaires</p>
-              <p class="stat-value" id="s-masse">0 DT</p>
+                <h2 class="stat-label">Total des salaires</h2>
+                <p class="stat-value" id="s-masse">0 DT</p>
             </article>
+
             <article class="card stat">
-              <p class="stat-label">Total des primes</p>
-              <p class="stat-value" id="s-primes">0 DT</p>
+                <h2 class="stat-label">Total des primes</h2>
+                <p class="stat-value" id="s-primes">0 DT</p>
             </article>
-          </section>
-          <div class="row">
+        </section>
+
+        <div class="row">
             <section class="card panel">
-              <h2>Évolution des employés</h2>
-              <div class="chart-wrap">
-                <canvas id="growthChart" role="img" aria-label="Évolution du nombre d'employés par mois"></canvas>
-              </div>
+                <h2>Évolution des employés</h2>
+                <div class="chart-wrap">
+                    <canvas id="growthChart" role="img" aria-label="Évolution du nombre d'employés par mois"></canvas>
+                </div>
             </section>
+
             <section class="card panel">
-              <h2>Répartition par contrat</h2>
-              <div class="chart-wrap small">
-                <canvas id="contractChart" role="img" aria-label="Répartition des employés par type de contrat"></canvas>
-              </div>
+                <h2>Répartition par contrat</h2>
+                <div class="chart-wrap small">
+                    <canvas id="contractChart" role="img" aria-label="Répartition des employés par type de contrat"></canvas>
+                </div>
             </section>
-          </div>
-        </main>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-        <script src="js/layout.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
 </html>
