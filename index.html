@@ -1,203 +1,57 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portail RH – Tableau de bord</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true" tabindex="-1">
-
-  <aside class="sidebar">
-    <div class="brand">
-      <span class="brand-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></span>
-      <div>
-        <strong>Ontonomia</strong>
-        <small>Administrateur</small>
-      </div>
-    </div>
-
-    <nav class="nav" aria-label="Navigation principale">
-      <a class="nav-link active" href="#" aria-current="page">
-        <i class="ico fa-solid fa-table-columns" aria-hidden="true"></i>Tableau de bord
-      </a>
-
-      <details class="group" open>
-        <summary class="nav-link">
-          <i class="ico fa-solid fa-users" aria-hidden="true"></i>Employés
-          <i class="chev fa-solid fa-chevron-down" aria-hidden="true"></i>
-        </summary>
-        <ul class="sub">
-          <li><a href="#">Liste des employés</a></li>
-          <li><a href="#">Contrats</a></li>
-          <li><a href="#">Congés</a></li>
-          <li>
-            <details class="subgroup" open>
-              <summary>Salaires<i class="chev fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
-              <ul class="subsub">
-                <li><a href="#">Tableau de salaires</a></li>
-                <li><a href="#">Avances</a></li>
-                <li><a href="#">Primes</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-      </details>
-
-
-    </nav>
-
-    <div class="logout">
-      <a href="#"><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>Déconnexion</a>
-    </div>
-  </aside>
-
-  <!-- ===== ZONE PRINCIPALE ===== -->
-  <div class="main">
-
-    <header class="topbar">
-      <label class="burger" for="menu-toggle" aria-label="Afficher ou masquer le menu">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </label>
-
-      <div class="crumbs">
-        <span class="crumb-parent">Ontonomia</span>
-        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-        <span class="crumb-current">Tableau de bord</span>
-      </div>
-
-      <div class="topbar-right">
-        <button type="button" class="bell" aria-label="Notifications">
-          <i class="fa-regular fa-bell" aria-hidden="true"></i>
-          <span class="bell-dot"></span>
-        </button>
-        <span class="separator"></span>
-        <div class="user">
-          <span class="avatar">SA</span>
-          <div class="user-text">
-            <strong>Ben Brahim Khouloud</strong>
-            <small>Administrateur</small>
-          </div>
-          <i class="user-chev fa-solid fa-chevron-down" aria-hidden="true"></i>
-        </div>
-      </div>
-    </header>
-
-    <main class="content">
-      <h1>Tableau de bord exécutif</h1>
-
-      <section class="grid-4" aria-label="Indicateurs RH">
-        <article class="card stat">
-          <div class="stat-head">
-            <p class="stat-label">Total employés</p>
-            <span class="chip chip-rust"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
-          </div>
-          <p class="stat-value">7</p>
-        </article>
-
-        <article class="card stat">
-          <div class="stat-head">
-            <p class="stat-label">Contrats actifs</p>
-            <span class="chip chip-orange"><i class="fa-solid fa-file-contract" aria-hidden="true"></i></span>
-          </div>
-          <p class="stat-value">4</p>
-          <p class="stat-note">Actifs ce mois</p>
-        </article>
-
-        <article class="card stat">
-          <div class="stat-head">
-            <p class="stat-label">Congés en cours</p>
-            <span class="chip chip-pink"><i class="fa-solid fa-calendar-xmark" aria-hidden="true"></i></span>
-          </div>
-          <p class="stat-value">0</p>
-          <p class="stat-note">Employé(s) aujourd'hui</p>
-        </article>
-
-        <article class="card stat">
-          <div class="stat-head">
-            <p class="stat-label">Masse salariale (mois)</p>
-            <span class="chip chip-rust"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></span>
-          </div>
-          <p class="stat-value">0.00 DT</p>
-        </article>
-      </section>
-
-      
-
-      <div class="row">
-        <section class="card panel chart-card">
-          <h2>Croissance des employés</h2>
-
-          <div class="chart" role="img" aria-label="Nombre d'employés par mois, de janvier à octobre">
-            <div class="col"><span class="bar"></span><span class="lbl">Jan</span></div>
-            <div class="col"><span class="bar"></span><span class="lbl">Feb</span></div>
-            <div class="col"><span class="bar"></span><span class="lbl">Mar</span></div>
-            <div class="col"><span class="bar"></span><span class="lbl">Apr</span></div>
-            <div class="col"><span class="bar"></span><span class="lbl">May</span></div>
-            <div class="col"><span class="bar"></span><span class="lbl">Jun</span></div>
-            <div class="col"><span class="bar"></span><span class="lbl">Jul</span></div>
-            <div class="col"><span class="bar bar-peak"></span><span class="lbl">Aug</span></div>
-            <div class="col"><span class="bar"></span><span class="lbl">Sep</span></div>
-            <div class="col">
-              <span class="tip">1</span>
-              <span class="bar bar-current"></span>
-              <span class="lbl">Oct</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="card panel notif-card">
-          <div class="panel-head">
-            <h2>Notifications</h2>
-            <a href="#">Tout voir</a>
-          </div>
-
-          <ul class="notif-list">
-            <li class="notif">
-              <span class="notif-icon"><i class="fa-solid fa-user-clock" aria-hidden="true"></i></span>
-              <div>
-                <p class="notif-title">Retour de congé</p>
-                <p class="notif-text">chebbi youssef est de retour de congé.</p>
-                <p class="notif-time">1 month ago</p>
+<!doctype html>
+  <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Tableau de bord RH</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/modules.css">
+    </head>
+    <body data-page="dashboard">
+      <main class="content">
+          <h1>Tableau de bord</h1>
+          <section class="grid-4" aria-label="Indicateurs RH">
+            <article class="card stat">
+              <p class="stat-label">Total employés</p>
+                <p class="stat-value" id="s-total">0</p>
+            </article>
+            <article class="card stat">
+              <p class="stat-label">Employés actifs</p>
+              <p class="stat-value" id="s-contrats">0</p>
+            </article>
+            <article class="card stat">
+              <p class="stat-label">Congés en attente</p>
+              <p class="stat-value" id="s-conges">0</p>
+            </article>
+            <article class="card stat">
+              <p class="stat-label">Total des salaires</p>
+              <p class="stat-value" id="s-masse">0 DT</p>
+            </article>
+            <article class="card stat">
+              <p class="stat-label">Total des primes</p>
+              <p class="stat-value" id="s-primes">0 DT</p>
+            </article>
+          </section>
+          <div class="row">
+            <section class="card panel">
+              <h2>Évolution des employés</h2>
+              <div class="chart-wrap">
+                <canvas id="growthChart" role="img" aria-label="Évolution du nombre d'employés par mois"></canvas>
               </div>
-            </li>
-            <li class="notif">
-              <span class="notif-icon"><i class="fa-solid fa-user-clock" aria-hidden="true"></i></span>
-              <div>
-                <p class="notif-title">Retour de congé</p>
-                <p class="notif-text">chebbi youssef est de retour de congé.</p>
-                <p class="notif-time">1 month ago</p>
+            </section>
+            <section class="card panel">
+              <h2>Répartition par contrat</h2>
+              <div class="chart-wrap small">
+                <canvas id="contractChart" role="img" aria-label="Répartition des employés par type de contrat"></canvas>
               </div>
-            </li>
-            <li class="notif">
-              <span class="notif-icon"><i class="fa-solid fa-user-clock" aria-hidden="true"></i></span>
-              <div>
-                <p class="notif-title">Retour de congé</p>
-                <p class="notif-text">refdcx chebbi est de retour de congé.</p>
-                <p class="notif-time">1 month ago</p>
-              </div>
-            </li>
-            <li class="notif">
-              <span class="notif-icon"><i class="fa-solid fa-user-clock" aria-hidden="true"></i></span>
-              <div>
-                <p class="notif-title">Retour de congé</p>
-                <p class="notif-text">refdcx chebbi est de retour de congé.</p>
-                <p class="notif-time">1 month ago</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-
-    
-    </main>
-  </div>
-
-</body>
+            </section>
+          </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+        <script src="js/layout.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
